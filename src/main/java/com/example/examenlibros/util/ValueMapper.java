@@ -19,6 +19,7 @@ public class ValueMapper {
     public static BookResponseDTO convertToDTO(book book){
         BookResponseDTO bookResponseDTO = new BookResponseDTO();
         bookResponseDTO.setId(book.getId());
+        bookResponseDTO.setAuthor(book.getAuthor());
         bookResponseDTO.setName(book.getName());
         bookResponseDTO.setPublishDate(book.getPublishDate());
         return bookResponseDTO;
