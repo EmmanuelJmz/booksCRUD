@@ -140,7 +140,7 @@ public class BookController {
                 .results("Libro eliminado")
                 .build();
 
-        log.info("MovieController::deleteMovie response {}", ValueMapper.jssonAsString(responseDTO));
+        log.info("MovieController::deleteBook response {}", ValueMapper.jssonAsString(responseDTO));
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 }
