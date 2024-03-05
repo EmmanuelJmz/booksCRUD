@@ -103,7 +103,7 @@ public class BookController {
 //    }
 
     @GetMapping("/date")
-    public ResponseEntity<ApiResponse> searchMoviesOrderByPublishDateDesc() {
+    public ResponseEntity<ApiResponse> searchBooksOrderByPublishDateDesc() {
         List<BookResponseDTO> books = bookService.findByOrderByPublishDate();
 
         ApiResponse<List<BookResponseDTO>> responseDTO = ApiResponse
@@ -131,7 +131,7 @@ public class BookController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse> deleteMovie(@PathVariable Long id) throws Exception {
+    public ResponseEntity<ApiResponse> deleteBook(@PathVariable Long id) throws Exception {
         bookService.deleteBook(id);
 
         ApiResponse<String> responseDTO = ApiResponse
